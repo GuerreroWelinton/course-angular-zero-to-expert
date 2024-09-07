@@ -1,0 +1,11 @@
+Desinstalar angular cli
+npm uninstall -g @angular/cli
+npm cache clean --force
+
+Instalar version especifica
+npm install -g @angular/cli@17.3.8
+
+Instalar ultima version
+npm install -g @angular/cli@latest
+
+ng new myapp --standalone false
