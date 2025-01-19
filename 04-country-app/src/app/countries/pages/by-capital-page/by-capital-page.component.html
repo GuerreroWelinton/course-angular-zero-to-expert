@@ -1,1 +1,26 @@
-<p>by-capital-page works!</p>
+<h2>By Capital</h2>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <!-- Searchbox -->
+    <!-- (onValue)="onSearchByCapital($event)" -->
+    <shared-search-box
+      [initialValue]="initialTermValue"
+      [placeholder]="'Search by capital'"
+      (onDebounce)="onSearchByCapital($event)"
+    ></shared-search-box>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <!-- Table -->
+    <hr />
+    @if (isLoading) {
+    <shared-loading-spinner></shared-loading-spinner>
+    } @else {
+    <countries-table [countries]="countries"> </countries-table>
+    }
+  </div>
+</div>
